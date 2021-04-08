@@ -1,0 +1,68 @@
+Найти с помощью утилит grep, awk и подобных следующую информацию: 
+
+a. С каких IP-адресов были заходы. 
+Ольга@Vaio MINGW64 /c/bitnami/testlink-1.9.20-11/apache2/logs
+$ awk '{print $1}' access.log |sort |uniq
+127.0.0.1
+::1
+
+b. Были ли страницы 404? Если да — вывести “битые” страницы. 
+Ольга@Vaio MINGW64 /c/bitnami/testlink-1.9.20-11/apache2/logs
+$ grep -w 404 access.log -c
+0
+
+c. Были ли ошибки сервера (коды ответа 50х), если да — вывести страницы. 
+Ольга@Vaio MINGW64 /c/bitnami/testlink-1.9.20-11/apache2/logs
+$ awk '{print $9}' access.log | sort | uniq -c | sort
+     13 304
+    319 200
+
+
+d. Подсчитать общее количество обращений к ресурсу (количество записей в файле). 
+Ольга@Vaio MINGW64 /c/bitnami/testlink-1.9.20-11/apache2/logs
+$ wc -l access.log
+327 access.log
+
+
+e. Определить временные диапазоны лога (время в первой и последней записи). 
+Ольга@Vaio MINGW64 /c/bitnami/testlink-1.9.20-11/apache2/logs
+$ head -1 access.log ; tail -1 access.log
+127.0.0.1 - - [12/Mar/2021:00:20:30 +0700] "GET / HTTP/1.1" 200 751
+::1 - - [12/Mar/2021:21:36:56 +0700] "GET /testlink/lib/general/mainPage.php HTTP/1.1" 200 3349
+
+
+
+i. Определить наиболее популярные страницы сайта 
+Ольга@Vaio MINGW64 /c/bitnami/testlink-1.9.20-11/apache2/logs
+$ cat access.log | awk '{ print $7 }' | sort | uniq -c | sort -rn | head -n 25
+     24 /testlink/lib/general/mainPage.php
+     13 /testlink/lib/general/navBar.php?tproject_id=0&tplan_id=0&updateMainPage=1
+     10 /testlink/index.php
+      4 /testlink/third_party/ext-js/ux/gridfilters/css/RangeMenu.css
+      4 /testlink/third_party/ext-js/ux/gridfilters/css/GridFilters.css
+      4 /testlink/third_party/ext-js/css/ext-all.css
+      4 /testlink/third_party/ckeditor/styles.js?t=J1QB
+      4 /testlink/third_party/ckeditor/skins/moonocolor/skin.js?t=J1QB
+      4 /testlink/third_party/ckeditor/skins/moonocolor/editor.css?t=J1QB
+      4 /testlink/third_party/ckeditor/plugins/tableselection/styles/tableselection.css
+      4 /testlink/third_party/ckeditor/plugins/scayt/dialogs/dialog.css
+      4 /testlink/third_party/ckeditor/lang/en.js?t=J1QB
+      4 /testlink/third_party/chosen/chosen.css
+      4 /testlink/gui/themes/default//css/frame.css
+      4 /testlink/cfg/tl_ckeditor_config.js?t=J1QB
+      4 /testlink//gui/themes/default/css/testlink.css
+      3 /testlink/third_party/ckeditor/skins/moonocolor/icons.png
+      3 /testlink/third_party/ckeditor/ckeditor.js
+      3 /testlink/third_party/bootstrap/3.4.1/css/bootstrap.min.css
+      3 /testlink/third_party/bootstrap/3.4.1/css/bootstrap-theme.min.css
+      3 /testlink/lib/plan/buildEdit.php
+      3 /testlink/gui/themes/default/images/trash.png
+      3 /testlink/gui/themes/default/images/sort_hint.png
+      3 /testlink/gui/themes/default/images/lightbulb.png
+      3 /testlink/gui/themes/default/images/favicon.ico
+
+ii. Вывести лог только за сегодняшний день, сегодняшний день определяется автоматически командой.
+Ольга@Vaio MINGW64 /c/bitnami/testlink-1.9.20-11/apache2/logs
+$ awk '{print $4}' access.log | cut -d: -f1 | uniq -c
+    332 [12/Mar/2021
+
