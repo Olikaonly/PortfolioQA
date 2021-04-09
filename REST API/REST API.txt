@@ -1,0 +1,20 @@
+Задание -
+
+Написать тесты для API Restful-booker.
+У вас должны быть тесты для следующих функций:
+
+* Auth — CreateToken;
+* Booking — GetBooking;
+* Booking — CreateBooking;
+* Booking — UpdateBooking
+* Booking — PartialUpdateBooking;
+* Booking — DeleteBooking;
+* Ping — HealthCheck.
+
+У каждого теста должны быть проверки хотя бы на статус ответа (200 ИЛИ 201 ИЛИ 404 и т. д.). 
+Для Create, Update, PartialUpdate - и для данных в JSON.
+Токен и bookingid должны храниться в переменных Collection.
+Запускать тесты нужно через Runner.
+
+Формат сдачи: экспортированный файл коллекции Postman, при необходимости — 
+экспортированный Environment (если у вас там есть переменные), скриншот результатов запуска Runner.
