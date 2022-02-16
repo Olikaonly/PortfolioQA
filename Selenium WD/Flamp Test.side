@@ -1,0 +1,170 @@
+{
+  "id": "39356cb2-b45b-4a88-a537-4e5d57389ac7",
+  "version": "2.0",
+  "name": "Flamp Test",
+  "url": "https://novosibirsk.flamp.ru",
+  "tests": [{
+    "id": "5a0f70a0-fc7f-4098-b657-821be0d0c9aa",
+    "name": "Аuthorization",
+    "commands": [{
+      "id": "b631db64-1706-408c-9d44-f54491b0bfd1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afb663fd-2710-4d0e-8143-af62586e6b15",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a898a0f0-e615-4f39-8ab9-5808dff5dee8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[text()='Вход']",
+      "targets": [
+        ["css=.js-cat-elements-button--login .button__label", "css:finder"],
+        ["xpath=//body[@id='page-top']/cat-layouts-content/div/cat-layouts-header/header/div/div/cat-layouts-header-top/div/div[3]/cat-layouts-user-space/div/ul/li[2]/cat-elements-button/div/div", "xpath:idRelative"],
+        ["xpath=//li[2]/cat-elements-button/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d821d2bb-5886-4c66-bfb8-e5f673c849f9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.js-cat-elements-field--email .input-text",
+      "targets": [
+        ["css=.js-cat-elements-field--email .input-text", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//body[@id='page-top']/cat-dialogs-modal/section/div[2]/div/div/cat-dialogs-auth/div/cat-forms-sign-in/form/div/cat-elements-field/div/div/div[2]/div/cat-inputs-text/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/cat-inputs-text/input", "xpath:position"]
+      ],
+      "value": "eolgis@ngs.ru"
+    }, {
+      "id": "a31145bf-221b-4b21-8d4e-ed2c89649b31",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-cat-elements-field--password .input-text",
+      "targets": [
+        ["css=.js-cat-elements-field--password .input-text", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//body[@id='page-top']/cat-dialogs-modal/section/div[2]/div/div/cat-dialogs-auth/div/cat-forms-sign-in/form/div[2]/cat-elements-fieldgroup-password/div/div/cat-elements-field/div/div/div[2]/div/cat-inputs-text/input", "xpath:idRelative"],
+        ["xpath=//div/div/cat-elements-field/div/div/div[2]/div/cat-inputs-text/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72adda77-37ae-4e2c-acb7-99cbbc67ae27",
+      "comment": "",
+      "command": "type",
+      "target": "css=.js-cat-elements-field--password .input-text",
+      "targets": [
+        ["css=.js-cat-elements-field--password .input-text", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//body[@id='page-top']/cat-dialogs-modal/section/div[2]/div/div/cat-dialogs-auth/div/cat-forms-sign-in/form/div[2]/cat-elements-fieldgroup-password/div/div/cat-elements-field/div/div/div[2]/div/cat-inputs-text/input", "xpath:idRelative"],
+        ["xpath=//div/div/cat-elements-field/div/div/div[2]/div/cat-inputs-text/input", "xpath:position"]
+      ],
+      "value": "qwerty123456"
+    }, {
+      "id": "6c652014-5e16-43e8-8c23-7ac264b901c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.loader-holder__content",
+      "targets": [
+        ["css=.loader-holder__content", "css:finder"],
+        ["xpath=//body[@id='page-top']/cat-dialogs-modal/section/div[2]/div/div/cat-dialogs-auth/div/cat-forms-sign-in/form/div[3]/cat-elements-button/div/div", "xpath:idRelative"],
+        ["xpath=//form/div[3]/cat-elements-button/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "861b5f7e-ccea-408f-9bca-a68dda18637d",
+    "name": "Change profile",
+    "commands": [{
+      "id": "326ae94d-b240-4733-a495-667b08f00306",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7212e124-47a2-4ad3-91a9-cf4b025c45b0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f8bc860-ceb1-4291-8615-c621c20c08af",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//div[@class=\"js-context-menu-holder context-menu-holder\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa19b961-6a60-4ed0-8aa9-60045e4a0287",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Мой профиль",
+      "targets": [
+        ["linkText=Мой профиль", "linkText"],
+        ["css=.list__item:nth-child(1) > .list__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Мой профиль')]", "xpath:link"],
+        ["xpath=//body[@id='page-top']/cat-layouts-content/div/cat-layouts-header/header/div/div/cat-layouts-header-top/div/div[3]/cat-layouts-user-space/div/ul/li[4]/div/cat-layouts-context-menu/div/div/cat-elements-actions-user/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/user4379998')])[2]", "xpath:href"],
+        ["xpath=//cat-elements-actions-user/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Мой профиль')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ba5f1ff-6f57-476e-8e38-814ae7c2b54b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Редактировать",
+      "targets": [
+        ["linkText=Редактировать", "linkText"],
+        ["css=.button-cta", "css:finder"],
+        ["xpath=//body[@id='page-top']/cat-layouts-content/div/cat-layouts-header/header/div[2]/cat-layouts-header-profile/div/div[2]/div[2]/ul/li/cat-elements-button-cta/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile')]", "xpath:href"],
+        ["xpath=//cat-elements-button-cta/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Редактировать')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae5b09a6-fc88-4ce8-b85f-b38d707f75e6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='Женский']",
+      "targets": [
+        ["css=.switch-labeled__option:nth-child(2) > .switch-labeled__label", "css:finder"],
+        ["xpath=//div[@id='page']/cat-layouts-page/cat-pages-profile-edit/section/div/div/div[2]/cat-forms-profile/form/div/div[3]/cat-elements-field/div/div/div[2]/div/cat-inputs-switch-labeled/div/label[2]/span", "xpath:idRelative"],
+        ["xpath=//label[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Женский')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c15b21fd-f7e1-40e4-8f24-76ec973dabe7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class=\"button__label button__label js-button-label loader-holder__content\"]",
+      "targets": [
+        ["css=.loader-holder__content", "css:finder"],
+        ["xpath=//div[@id='page']/cat-layouts-page/cat-pages-profile-edit/section/div/div/div[2]/cat-forms-profile/form/div[2]/cat-elements-submit-group/div/div/cat-elements-button/div/div", "xpath:idRelative"],
+        ["xpath=//cat-elements-submit-group/div/div/cat-elements-button/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1a706d4d-97a6-4a97-b7df-adb71518d1cc",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5a0f70a0-fc7f-4098-b657-821be0d0c9aa"]
+  }],
+  "urls": ["https://novosibirsk.flamp.ru/"],
+  "plugins": []
+}
