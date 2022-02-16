@@ -12,5 +12,6 @@ Portfolio QA Engineer
 - Apache Server. Логи
 - API. SOAP API
 - REST API
+- Автоматизация тестирования Web UI на Java
 
 В каждом проекте указана задача которую необходимо решить и результат решения. 
