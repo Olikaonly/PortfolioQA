@@ -1,0 +1,3 @@
+Работа с imgur API [https://www.postman.com/explore/collection/131/imgur-api](http://).
+
+1. Автоматизируйте тестирование для Images (минимум 10 кейсов), используя rest-assured.
