@@ -13,5 +13,6 @@ Portfolio QA Engineer
 - API. SOAP API
 - REST API
 - Автоматизация тестирования Web UI на Java
+- Тестирование backend на Java
 
 В каждом проекте указана задача которую необходимо решить и результат решения. 
